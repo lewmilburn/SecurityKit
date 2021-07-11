@@ -28,7 +28,7 @@ Input checking is carried out by a PHP function built into Saturn, simply send t
 ```php
 <?php
   $userInput = $_POST['input'];
-  $secureInput = checkInput('DEFAULT', $userInput);
+  $secureInput = checkData('DEFAULT', $userInput);
   unset($userInput);
 ?>
 ```
@@ -49,7 +49,7 @@ Certain elements are always blocked regardless of the mode selected.
 
 **DEFAULT (Recommended)**
   
-`$secureInput = checkInput('DEFAULT', $userInput);`
+`$secureInput = checkData('DEFAULT', $userInput);`
   
 Allows No Code.
   
@@ -58,7 +58,7 @@ Allows No Code.
   
 **HTML**
   
-`$secureInput = checkInput('HTML', $userInput);`
+`$secureInput = checkData('HTML', $userInput);`
   
 Allows HTML.
   
@@ -67,7 +67,7 @@ Allows HTML.
   
 **CSS**
   
-`$secureInput = checkInput('CSS', $userInput);`
+`$secureInput = checkData('CSS', $userInput);`
   
 Allows HTML and CSS.
   
@@ -76,7 +76,7 @@ Allows HTML and CSS.
   
 **TAGCSS**
   
-`$secureInput = checkInput('TAGCSS', $userInput);`
+`$secureInput = checkData('TAGCSS', $userInput);`
   
 Allows HTML and Tagged CSS.
   
@@ -84,7 +84,7 @@ Allows HTML and Tagged CSS.
   
 **JS**
   
-`$secureInput = checkInput('JS', $userInput);`
+`$secureInput = checkData('JS', $userInput);`
   
 Allows HTML and JavaScript.
   
@@ -92,7 +92,7 @@ Allows HTML and JavaScript.
 
 **ALL**
   
-`$secureInput = checkInput('ALL', $userInput);`
+`$secureInput = checkData('ALL', $userInput);`
   
 Allows HTML, CSS, Tagged CSS and JavaScript.
   
