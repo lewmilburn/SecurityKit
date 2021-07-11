@@ -21,7 +21,7 @@ This will output a message and halt the program after the message has been sent,
 
 ### Generate Checksum
 
-This function generates a checksum for data provided to it. $data should be the data that you want to create a checksum for. If you need to check a checksum, use the checksum_validate method shown above.
+This function generates a checksum for data provided to it. `$data` should be the data that you want to create a checksum for. If you need to check a checksum, use the `checksum_validate` method shown above.
 
 ```php
 $data = 'Hello World';
@@ -30,8 +30,8 @@ $checksum = checksum_generate($data);
 
 ### Validate / 'Check' Checksum
 
-This function validates checksums generated using checksum_generate match the data that needs to be checked. In this example, we're checking 'Hello World' against it's checksum. We pass the data and the checksum that we want to compare into the function, and recieve a true/false response. 
-`$data` should be the data that you want to validate, `$checksum` should be a pre-generated checksum for this data. If you need to generate a checksum, use the checksum_generate method shown above.
+This function validates checksums generated using checksum_generate match the data that needs to be checked. In this example, we're checking 'Hello World' against it's checksum. We pass the data and the checksum that we want to compare into the function, and recieve a `true` or `false` response. 
+`$data` should be the data that you want to validate, `$checksum` should be a pre-generated checksum for this data. If you need to generate a checksum, use the `checksum_generate` method shown above.
 
 ```php
 $data = 'Hello World';
@@ -53,10 +53,10 @@ $secureInput = checkData('DEFAULT', $userInput);
 unset($userInput);
 ```
 Here's a brief explaination of what's going on at Line 3:
-- $secureInput is your new, checked and cleaned input ready to interface with the rest of the program.
-- $secureInput = checkData('DEFAULT', $userInput); is the function.
-- DEFAULT is the function's mode, see the next section for more modes and what they do.
-- $userInput is the input that needs to be cleaned and checked.
+- `$secureInput` is your new, checked and cleaned input ready to interface with the rest of the program.
+- `$secureInput = checkData('DEFAULT', $userInput);` is the function.
+- `DEFAULT` is the function's mode, see the next section for more modes and what they do.
+- `$userInput` is the input that needs to be cleaned and checked.
 
 ### Always Blocked
 Certain elements are always blocked regardless of the mode selected.
