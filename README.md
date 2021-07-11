@@ -4,39 +4,32 @@ PHPDataSecurity is a modified version of the Saturn Security System (https://git
 ## How to use PHPDataSecurity
 If you're connecting to PHPDataSecurity from the root folder, use:
 ```php
-<?php
-  include __DIR__.'/PHPDataSecurity/main.php';
-?>
+include __DIR__.'/HPDataSecurity/main.php';
 ```
 If you're connecting to PHPDataSecurity from a sub-folder, you'll need to include some `/../` depending on how deep in sub-folders the file is.
 ```php
-<?php
-  include __DIR__.'/../PHPDataSecurity/main.php';
-?>
+include __DIR__.'/../PHPDataSecurity/main.php';
 ```
 To check if it's connected, you can assign the `$pdsConnectCheck` variable and set it to true.
 ```php
-<?php
-  $pdsConnectCheck = true;
-  include __DIR__.'/../PHPDataSecurity/main.php';
-?>
+$pdsConnectCheck = true;
+include __DIR__.'/../PHPDataSecurity/main.php';
 ```
+This will output a message and halt the program after the message has been sent, so don't forget to remove the variable line before pushing to production!!
 
 ## How to use Input Checking
 
-Input checking is carried out by a PHP function built into Saturn, simply send the variable used to hold the data through the function, and it's result will be checked and cleaned. See out the example below to learn how to integrate Input Checking into your plugin or theme.
+Simply send the variable used to hold the data through the function, and it's result will be checked and cleaned. See out the example below to learn how to integrate Input Checking into your code.
 ```php
-<?php
-  $userInput = $_POST['input'];
-  $secureInput = checkData('DEFAULT', $userInput);
-  unset($userInput);
-?>
+$userInput = $_POST['input'];
+$secureInput = checkData('DEFAULT', $userInput);
+unset($userInput);
 ```
 Here's a brief explaination of what's going on at Line 3:
-$secureInput is your new, checked and cleaned input ready to interface with the rest of the program.
-$secureInput = checkInput('DEFAULT', $userInput); is the function.
-DEFAULT is the function's mode, see the next section for more modes and what they do.
-$userInput is the input that needs to be cleaned and checked.
+- $secureInput is your new, checked and cleaned input ready to interface with the rest of the program.
+- $secureInput = checkData('DEFAULT', $userInput); is the function.
+- DEFAULT is the function's mode, see the next section for more modes and what they do.
+- $userInput is the input that needs to be cleaned and checked.
 
 ### Always Blocked
 Certain elements are always blocked regardless of the mode selected.
@@ -49,7 +42,9 @@ Certain elements are always blocked regardless of the mode selected.
 
 **DEFAULT (Recommended)**
   
-`$secureInput = checkData('DEFAULT', $userInput);`
+```php
+$secureInput = checkData('DEFAULT', $userInput);
+```
   
 Allows No Code.
   
@@ -58,7 +53,9 @@ Allows No Code.
   
 **HTML**
   
-`$secureInput = checkData('HTML', $userInput);`
+```php
+$secureInput = checkData('HTML', $userInput);
+```
   
 Allows HTML.
   
@@ -67,7 +64,9 @@ Allows HTML.
   
 **CSS**
   
-`$secureInput = checkData('CSS', $userInput);`
+```php
+$secureInput = checkData('CSS', $userInput);
+```
   
 Allows HTML and CSS.
   
@@ -76,7 +75,9 @@ Allows HTML and CSS.
   
 **TAGCSS**
   
-`$secureInput = checkData('TAGCSS', $userInput);`
+```php
+$secureInput = checkData('TAGCSS', $userInput);
+```
   
 Allows HTML and Tagged CSS.
   
@@ -84,7 +85,9 @@ Allows HTML and Tagged CSS.
   
 **JS**
   
-`$secureInput = checkData('JS', $userInput);`
+```php
+$secureInput = checkData('JS', $userInput);
+```
   
 Allows HTML and JavaScript.
   
@@ -92,7 +95,9 @@ Allows HTML and JavaScript.
 
 **ALL**
   
-`$secureInput = checkData('ALL', $userInput);`
+```php
+$secureInput = checkData('ALL', $userInput);
+```
   
 Allows HTML, CSS, Tagged CSS and JavaScript.
   
