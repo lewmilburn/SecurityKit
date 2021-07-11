@@ -4,7 +4,7 @@ PHPDataSecurity is a modified version of the Saturn Security System (https://git
 ## How to use PHPDataSecurity
 If you're connecting to PHPDataSecurity from the root folder, use:
 ```php
-include __DIR__.'/HPDataSecurity/main.php';
+include __DIR__.'/PHPDataSecurity/main.php';
 ```
 If you're connecting to PHPDataSecurity from a sub-folder, you'll need to include some `/../` depending on how deep in sub-folders the file is.
 ```php
@@ -17,7 +17,34 @@ include __DIR__.'/../PHPDataSecurity/main.php';
 ```
 This will output a message and halt the program after the message has been sent, so don't forget to remove the variable line before pushing to production!!
 
-## How to use Input Checking
+## How to use Checksums
+
+### Generate Checksum
+
+This function generates a checksum for data provided to it. $data should be the data that you want to create a checksum for. If you need to check a checksum, use the checksum_validate method shown above.
+
+```php
+$data = 'Hello World';
+$checksum = checksum_generate($data);
+```
+
+### Validate / 'Check' Checksum
+
+This function validates checksums generated using checksum_generate match the data that needs to be checked. In this example, we're checking 'Hello World' against it's checksum. We pass the data and the checksum that we want to compare into the function, and recieve a true/false response. 
+`$data` should be the data that you want to validate, `$checksum` should be a pre-generated checksum for this data. If you need to generate a checksum, use the checksum_generate method shown above.
+
+```php
+$data = 'Hello World';
+$checksum = '2c74fd17edafd80e8447b0d46741ee243b7eb74dd2149a0ab1b9246fb30382f27e853d8585719e0e67cbda0daa8f51671064615d645ae27acb15bfb1447f459b';
+
+if (checksum_validate($data, $checksum) == true) {
+    /* The checksum is valid / correct */
+} else {
+    /* The checksum is invalid / incorrect */
+}
+```
+
+## How to use Data Checker
 
 Simply send the variable used to hold the data through the function, and it's result will be checked and cleaned. See out the example below to learn how to integrate Input Checking into your code.
 ```php
