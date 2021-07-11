@@ -1,5 +1,26 @@
 # PHPDataSecurity
-PHP Data checking utility.
+PHPDataSecurity is a modified version of the Saturn Security System (https://github.com/lmwnweb/saturn).
+
+## How to use PHPDataSecurity
+If you're connecting to PHPDataSecurity from the root folder, use:
+```php
+<?php
+  include __DIR__.'/PHPDataSecurity/main.php';
+?>
+```
+If you're connecting to PHPDataSecurity from a sub-folder, you'll need to include some `/../` depending on how deep in sub-folders the file is.
+```php
+<?php
+  include __DIR__.'/../PHPDataSecurity/main.php';
+?>
+```
+To check if it's connected, you can assign the `$pdsConnectCheck` variable and set it to true.
+```php
+<?php
+  $pdsConnectCheck = true;
+  include __DIR__.'/../PHPDataSecurity/main.php';
+?>
+```
 
 ## How to use Input Checking
 
