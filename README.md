@@ -130,5 +130,5 @@ Allows HTML, CSS, Tagged CSS and JavaScript.
   
 *Allows all server-safe content to pass through. HTML, CSS and JavaScript content is allowed. External CSS, JavaScript and the tag is blocked.*
 
-##Disclaimer
-SecurityKit and it's contributors cannot be held responsible for any data breaches, leaks or vulnerabilities as a result of SecurityKit software.
+## Disclaimer
+SecurityKit and it's contributors cannot be held responsible for any data breaches, leaks or vulnerabilities as a result of SecurityKit software. This software may contain bugs, use at your own risk.
