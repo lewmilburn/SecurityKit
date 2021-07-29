@@ -1,19 +1,19 @@
-# PHPDataSecurity
-PHPDataSecurity is a modified version of the Saturn Security System (https://github.com/lmwnweb/saturn).
+# SecurityKit
+SecurityKit is a modified version of the Saturn Security System (https://github.com/lmwnweb/saturn).
 
-## How to use PHPDataSecurity
-If you're connecting to PHPDataSecurity from the root folder, use:
+## How to use SecurityKit
+If you're connecting to SecurityKit from the root folder, use:
 ```php
-include __DIR__.'/PHPDataSecurity/main.php';
+include __DIR__.'/SecurityKit/main.php';
 ```
 If you're connecting to PHPDataSecurity from a sub-folder, you'll need to include some `/../` depending on how deep in sub-folders the file is.
 ```php
-include __DIR__.'/../PHPDataSecurity/main.php';
+include __DIR__.'/../SecurityKit/main.php';
 ```
-To check if it's connected, you can assign the `$pdsConnectCheck` variable and set it to true.
+To check if it's connected, you can assign the `$skConnectCheck` variable and set it to true.
 ```php
-$pdsConnectCheck = true;
-include __DIR__.'/../PHPDataSecurity/main.php';
+$skConnectCheck = true;
+include __DIR__.'/../SecurityKit/main.php';
 ```
 This will output a message and halt the program after the message has been sent, so don't forget to remove the variable line before pushing to production!!
 
