@@ -2,4 +2,4 @@
     include 'checksum.php';
     include 'dataChecker.php';
     
-    if($pdsConnectCheck) { echo 'Connected to PHPDataSecurity.'; exit; }
+    if(isset($skConnectCheck)) { echo 'Connected to SecurityKit.'; exit; }
