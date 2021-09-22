@@ -1,5 +1,5 @@
 # SecurityKit
-SecurityKit is a modified version of the Saturn Security System (https://github.com/lmwnweb/saturn). SecurityKit adds basic functions with the aim to improve security in PHP programs, removing the need for developers to manage their own security systems and centralising security operations.
+SecurityKit is a modified version of the Saturn Security System (https://github.com/LMWNWeb/Saturn/tree/master/assets/common/processes/security). SecurityKit adds basic functions with the aim to improve security in PHP programs, removing the need for developers to manage their own security systems and centralising security operations.
 
 ## How to use SecurityKit
 If you're connecting to SecurityKit from the root folder, use:
