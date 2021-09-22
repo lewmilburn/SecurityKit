@@ -2,12 +2,18 @@
     function checkData($mode, $data)
     {
         global $conn;
-
-        $data = mysqli_real_escape_string($conn, $data);
-        $data = dataChecker($data, '<?', '&lt;?');
-        $data = dataChecker($data, '<script src=', '&lt;script src=');
-        $data = dataChecker($data, '<script src =', '&lt;script src =');
-        $data = dataChecker($data, '<link', '&lt;link');
+        
+        if (SK_BLOCK_INJECTION) {
+            $data = mysqli_real_escape_string($conn, $data);
+            $data = dataChecker($data, '<?', '&lt;?');
+        }
+        
+        if (SK_BLOCK_EXTERNALS) {
+            $data = dataChecker($data, '<script src=', '&lt;script src=');
+            $data = dataChecker($data, '<script src =', '&lt;script src =');
+            $data = dataChecker($data, '<link', '&lt;link');
+        }
+        
         if ($mode == 'DEFAULT') {
             $data = htmlspecialchars($data);
             $data = dataChecker($data, '<script', '&lt;script');
