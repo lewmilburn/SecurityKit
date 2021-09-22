@@ -1,4 +1,5 @@
 <?php
+    include 'config.php';
     include 'checksum.php';
     include 'dataChecker.php';
     
