@@ -64,6 +64,7 @@ Certain elements are always blocked regardless of the mode selected.
 - External <script> tags are disabled.
 - PHP and SQL Commands are disabled.
 - Access to external CSS and JS is availiable in the Administration panel.
+These hard-coded blocks can be removed by editing the code of the program. I'm going to add a setting for this soon.
 
 ### Modes
 
