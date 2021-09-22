@@ -46,11 +46,11 @@ if (checksum_validate($data, $checksum) == true) {
 
 ## How to use Data Checker
 
-Simply send the variable used to hold the data through the function, and it's result will be checked and cleaned. See out the example below to learn how to integrate Input Checking into your code.
+Simply send the variable used to hold the data through the function, and it's result will be checked and cleaned. See out the example below to learn how to integrate Input Checking into your code. You can use this on any input, here's a few examples:
 ```php
-$userInput = $_POST['input'];
 $secureInput = checkData('DEFAULT', $userInput);
-unset($userInput);
+$secureInput = checkData('DEFAULT', $_POST['message']);
+$secureInput = checkData('DEFAULT', $_GET['id']);
 ```
 Here's a brief explaination of what's going on at Line 3:
 - `$secureInput` is your new, checked and cleaned input ready to interface with the rest of the program.
