@@ -59,12 +59,11 @@ Here's a brief explaination of what's going on at Line 3:
 - `$userInput` is the input that needs to be cleaned and checked.
 
 ### Always Blocked
-Certain elements are always blocked regardless of the mode selected.
+Certain elements are always blocked regardless of the mode selected. You can disable this in the config file, but it is not recommended.
 - External CSS via <link> and @import are disabled.
 - External <script> tags are disabled.
 - PHP and SQL Commands are disabled.
 - Access to external CSS and JS is availiable in the Administration panel.
-These hard-coded blocks can be removed by editing the code of the program. I'm going to add a setting for this soon.
 
 ### Modes
 
