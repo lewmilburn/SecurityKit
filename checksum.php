@@ -1,12 +1,12 @@
 <?php
     function checksum_generate($data): string
     {
-        return hash('sha512', $data);
+        return hash(SK_CHECKSUM_HASH, $data);
     }
 
     function checksum_validate($data, $hash): bool
     {
-        $dataHash = hash('sha512', $data);
+        $dataHash = hash(SK_CHECKSUM_HASH, $data);
         if ($hash == $dataHash) {
             $return = true;
         } else {
