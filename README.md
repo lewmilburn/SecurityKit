@@ -1,6 +1,6 @@
 # SecurityKit
 
-> :info: **This repository is archived.** If you use this software you won't recieve any support. We recommend migrating to Boa (https://github.com/lewmilburn/boa) for up-to-date security scanning and protection.
+> :warning: **This repository is archived.** If you use this software you won't recieve any support. We recommend migrating to Boa (https://github.com/lewmilburn/boa) for up-to-date security scanning and protection.
 
 SecurityKit adds basic functions with the aim to improve security in PHP programs, removing the need for developers to manage their own security systems and centralising security operations.
 
